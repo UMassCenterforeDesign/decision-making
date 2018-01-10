@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/tom/ontologies/2017/8/decision_process"
+     xml:base="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20process.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/tom/ontologies/2017/8/decision_process">
+     ontologyIRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20process.owl">
     <Prefix name="" IRI="http://www.semanticweb.org/tom/ontologies/2017/8/decision_process"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://www.semanticweb.org/tom/ontologies/2017/8/ergo_design</Import>
+    <Import>https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl</Import>
     <Declaration>
         <ObjectProperty IRI="http://www.semanticweb.org/tom/ontologies/2017/3/BEM2.0#is_replaced_by"/>
     </Declaration>
@@ -23,13 +23,7 @@
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#need"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#preference"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="http://www.semanticweb.org/tom/ontologies/2017/3/BEM2.0#modifies"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#estimate"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
@@ -38,13 +32,16 @@
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#need_identification_process"/>
     </Declaration>
     <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20core.owl#preference"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#requirement_specification"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#specification_process"/>
+        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#requirement_specification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#evaluation_protocol"/>
@@ -57,6 +54,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.semanticweb.org/tom/ontologies/2017/3/BEM2.0#is_modified_by"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#specification_process"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.semanticweb.org/tom/ontologies/2017/3/BEM2.0#modifies_participant"/>
@@ -72,6 +72,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#mission_specification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#estimate"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.semanticweb.org/tom/ontologies/2017/3/BEM2.0#enables_plan"/>
@@ -122,17 +125,6 @@
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#risk_appetite"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#specification_process"/>
-        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#specification_process"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/OBI_0000299"/>
-            <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#constraint_specification"/>
         <Class IRI="http://purl.obolibrary.org/obo/IAO_0000005"/>
     </SubClassOf>
@@ -171,7 +163,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#decision_method"/>
-        <Class IRI="http://www.semanticweb.org/tom/ontologies/2017/8/ergo_design#method"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#decision_plan_specification"/>
@@ -219,10 +211,6 @@
         <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#preference"/>
-        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#preference_elicitation_process"/>
         <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
     </SubClassOf>
@@ -240,6 +228,21 @@
     <SubClassOf>
         <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#risk_appetite"/>
         <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20core.owl#preference"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#specification_process"/>
+        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#specification_process"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/OBI_0000299"/>
+            <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.semanticweb.org/tom/ontologies/2017/3/BEM2.0#eliminates"/>
@@ -311,7 +314,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#is_preference_for"/>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#preference"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20core.owl#preference"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.semanticweb.org/tom/ontologies/2017/3/BEM2.0#eliminates"/>
@@ -404,16 +407,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.semanticweb.org/tom/ontologies/2017/3/BEM2.0#replaces</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">replaces process</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>#specification_process</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a specification process is a planned process that realizes some plan wherein an agent or aggregate thereof develop and assign directive information entities that are about some entity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#specification_process</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">specification process</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -512,11 +505,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#preference</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a preference is a dispositoin of some agent to favor one alternative over another based on the agents&apos; understanding of the two alternatives.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <IRI>http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#preference_elicitation_process</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a preference elicitation process is a planned process wherein some agent or aggregate of agents determines the preferences of another agent or aggregate of agents along some set of criteria</Literal>
     </AnnotationAssertion>
@@ -544,6 +532,21 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#risk_appetite</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">risk appetite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20core.owl#preference</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a preference is a dispositoin of some agent to favor one alternative over another based on the agents&apos; understanding of the two alternatives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#specification_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a specification process is a planned process that realizes some plan wherein an agent or aggregate thereof develop and assign directive information entities that are about some entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#specification_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">specification process</Literal>
     </AnnotationAssertion>
 </Ontology>
 

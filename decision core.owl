@@ -1,20 +1,19 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision"
+     xml:base="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20core.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision">
+     ontologyIRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20core.owl">
     <Prefix name="" IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://www.semanticweb.org/tom/ontologies/2017/8/decision_process</Import>
-    <Import>http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model</Import>
-    <Import>http://www.semanticweb.org/tomhagdorn/ontologies/2017/10/decision_method</Import>
+    <Import>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20method.owl</Import>
+    <Import>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20process.owl</Import>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDisposition"/>
     </Declaration>
@@ -22,10 +21,7 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#preference"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#setting_specification"/>
+        <NamedIndividual IRI="#walkaway_point_classification"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#YardMeasurementUnit"/>
@@ -40,9 +36,6 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfFunction"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#rank_specification"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CentimeterMeasurementUnit"/>
     </Declaration>
     <Declaration>
@@ -50,9 +43,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPortionOfMaterialConsumption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#hypothetical_immaterial_entity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#HourMeasurementUnit"/>
@@ -91,10 +81,16 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDependentContinuant"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#hypothetical_occurrent"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMilitaryForce"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#selects"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MileMeasurementUnit"/>
@@ -103,13 +99,16 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTraining"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#decision_attirbute"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunicationByMedia"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MilliliterMeasurementUnit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#classification_marginally_acceptable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#preference_level_label"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#FootMeasurementUnit"/>
@@ -121,9 +120,6 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#decision_plan_specification"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
     </Declaration>
     <Declaration>
@@ -133,49 +129,34 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#eliminates_option"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#classification_stretch_goal"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#decision_rank"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTerrorism"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#ErgMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTerrorism"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfRepresentativeCommunication"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#approves"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#objective_spec_uav"/>
+        <Class IRI="#attribute_level_classification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationContentEntity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#swing_weight_determination_proces"/>
+        <Class IRI="#stretch_goal"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SecondMeasurementUnit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#classification_target_value"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#ShortTonMeasurementUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#TablespoonMeasurementUnit"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#hypothetical_continuant"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#minimizing_objective"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfDependentContinuant"/>
@@ -193,6 +174,9 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PoundsPerSquareInchMeasurementUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#importance_classification"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfDependentContinuant"/>
     </Declaration>
     <Declaration>
@@ -205,13 +189,13 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#NewtonMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareDecimeterMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#computed_coefficient"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#classification_meaningful_limit"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfFunction"/>
@@ -220,7 +204,7 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DecigramMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#refers_to"/>
+        <Class IRI="#maximizing_objective"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPossession"/>
@@ -238,7 +222,7 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilopondMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#importance"/>
+        <Class IRI="#target_value"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MinuteMeasurementUnit"/>
@@ -247,13 +231,25 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PascalMeasurementUnit"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#defining_importance_classification"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://edesign.ecs.umass.edu/ontologies/Framework2.0/FunctionalModel2.0.owl#affects"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareFootMeasurementUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model#agent"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#hypothetical_continuant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#hypothetical_material_entity"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower"/>
@@ -271,16 +267,10 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfSpecificallyDependentContinuant"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#plan_uav_decision"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMassMediaCommunication"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfExpressiveCommunication"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#low_differentiation_classification"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CalorieMeasurementUnit"/>
@@ -292,7 +282,10 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfGenericallyDependentContinuant"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#maximizing_objective"/>
+        <Class IRI="#measurement_specification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eliminates_criterion"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareCentimeterMeasurementUnit"/>
@@ -301,31 +294,31 @@
         <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#example_of_usage"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#introduces_criterion"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfLocationChange"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#differentiation_classification"/>
+        <NamedIndividual IRI="#critical_importance_classification"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#argument"/>
+        <ObjectProperty IRI="#refers_to"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfSpeed"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#enabling_importance_classification"/>
+        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DyneMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DyneMeasurementUnit"/>
+        <Class IRI="#authority_role"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfRole"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MillimeterMeasurementUnit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#walkaway_point_classification"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#AcreMeasurementUnit"/>
@@ -337,10 +330,13 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfSpecificallyDependentContinuant"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#target_value"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_data_item"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#walk_way_point"/>
+        <Class IRI="#hypothetical_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eliminates"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
@@ -373,13 +369,10 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLevel"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#eliminates_criterion"/>
+        <DataProperty IRI="#has_computed_value"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#introduces_criterion"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#rejects"/>
+        <NamedIndividual IRI="#enabling_importance_classification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
@@ -388,43 +381,46 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTemperature"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#critical_importance_classification"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce"/>
+        <Class IRI="#hypothetical_immaterial_entity"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfFunction"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#low_differentiation_classification"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicDecimeterMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#measurement_specification"/>
+        <Class IRI="#meaningful_limit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#preference_level_label"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactModification"/>
+        <ObjectProperty IRI="#rejects"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareInchMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#eliminates"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactModification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfToolUse"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#hypothetical_entity"/>
+        <Class IRI="#differentiation_classification"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#tradeoff"/>
+        <NamedIndividual IRI="#objective_spec_uav"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#authority_role"/>
+        <ObjectProperty IRI="#approves"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medium_differentation_classification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfWeaponUse"/>
@@ -433,31 +429,40 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilogramMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#LiterMeasurementUnit"/>
+        <Class IRI="#decision_plan_specification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfQuality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfGovernment"/>
+        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#LiterMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#attribute_level_classification"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfGovernment"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#swing_weight_determination_proces"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#argument"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eliminates_option"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#objective"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#AtmosphereMeasurementUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#minimizing_objective"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#JouleMeasurementUnit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#classification_meaningful_limit"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_computed_value"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfGenericallyDependentContinuant"/>
@@ -466,46 +471,52 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#BayreMeasurementUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDirectiveCommunication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#walk_way_point"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#NauticalMileMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#agent"/>
+        <Class IRI="#decision_rank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#rank_specification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#meaningful_limit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#classification_marginally_acceptable"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+        <Class IRI="#importance"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MillibarMeasurementUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#setting_specification"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicInchMeasurementUnit"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTrainingAcquisition"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTrainingAcquisition"/>
+        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicInchMeasurementUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PintMeasurementUnit"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfFinancialInstrumentUse"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#importance_classification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/OBI_0001929"/>
@@ -517,28 +528,16 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPositionChange"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#hypothetical_material_entity"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#LongTonMeasurementUnit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#YearMeasurementUnit"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LegalSystemAct"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#decides_about"/>
+        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#YearMeasurementUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#GallonMeasurementUnit"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#differentiation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#defining_importance_classification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPersonalCommunication"/>
@@ -547,13 +546,10 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#HorsepowerMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#stretch_goal"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfViolence"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#selects"/>
+        <NamedIndividual IRI="#plan_uav_decision"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfRealizableEntity"/>
@@ -565,19 +561,19 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilometerMeasurementUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#CriminalAct"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#CriminalAct"/>
+        <Class IRI="#differentiation"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfLegalInstrumentUse"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfRole"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_estimated_value"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfQuality"/>
@@ -589,13 +585,22 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KiloliterMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#TeaspoonMeasurementUnit"/>
+        <NamedIndividual IRI="#classification_stretch_goal"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#OunceMeasurementUnit"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#TeaspoonMeasurementUnit"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#QuartMeasurementUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#marginally_acceptable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#decides_about"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KnotMeasurementUnit"/>
@@ -604,13 +609,10 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DayMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#decision_maker_role"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#classification_target_value"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareMileMeasurementUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_alternative"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.semanticweb.org/tom/ontologies/2017/8/ergo#stakeholder_role"/>
@@ -637,9 +639,6 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfRealizableEntity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#decision"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeterPerSecondMeasurementUnit"/>
     </Declaration>
     <Declaration>
@@ -649,13 +648,19 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfVehicleUse"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfIntelligenceGathering"/>
+        <Class IRI="#weight_data_set"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDecoyUse"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfIntelligenceGathering"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfFacilityUse"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_estimated_value"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareYardMeasurementUnit"/>
@@ -664,7 +669,16 @@
         <Class IRI="http://purl.obolibrary.org/obo/IAO_0000006"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#tradeoff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#preference"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommissiveCommunication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model#computed_coefficient"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilometerPerHourMeasurementUnit"/>
@@ -673,13 +687,16 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#has_alternative"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#marginally_acceptable"/>
+        <NamedIndividual IRI="#high_differentiation_classification"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicYardMeasurementUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#decision_attirbute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#decision_maker_role"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MilePerHourMeasurementUnit"/>
@@ -691,9 +708,6 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfQuality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/tom/ontologies/2017/8/regulation#classification"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfInhabitancy"/>
     </Declaration>
     <Declaration>
@@ -703,22 +717,13 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfSpecificallyDependentContinuant"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#hypothetical_occurrent"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#InchMeasurementUnit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#high_differentiation_classification"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTrainingInstruction"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#medium_differentation_classification"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#weight_data_set"/>
+        <Class IRI="#decision"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/OBI_0200170"/>
@@ -931,7 +936,7 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfDependentContinuant"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#realizes"/>
-            <Class IRI="http://edesign.ecs.umass.edu/ontologies/Framework2.0/FunctionalModel2.0.owl#Decrease_function"/>
+            <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/functional%20model%202.0.owl#Decrease_function"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1130,7 +1135,7 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDependentContinuant"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#realizes"/>
-            <Class IRI="http://edesign.ecs.umass.edu/ontologies/Framework2.0/FunctionalModel2.0.owl#Increase_function"/>
+            <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/functional%20model%202.0.owl#Increase_function"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1235,12 +1240,12 @@
         <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#agent"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model#agent"/>
         <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#computed_coefficient"/>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#computed_data_item"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model#computed_coefficient"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_data_item"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#argument"/>
@@ -1289,7 +1294,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#decision_rank"/>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#computed_data_item"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_data_item"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#differentiation"/>
@@ -1297,7 +1302,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#differentiation_classification"/>
-        <Class IRI="http://www.semanticweb.org/tom/ontologies/2017/8/regulation#classification"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#hypothetical_continuant"/>
@@ -1325,7 +1330,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#importance_classification"/>
-        <Class IRI="http://www.semanticweb.org/tom/ontologies/2017/8/regulation#classification"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#marginally_acceptable"/>
@@ -1333,7 +1338,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#maximizing_objective"/>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#objective"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#objective"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#meaningful_limit"/>
@@ -1352,7 +1357,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#minimizing_objective"/>
-        <Class IRI="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#objective"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#objective"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#preference_level_label"/>
@@ -1379,7 +1384,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#swing_weight_determination_proces"/>
-        <Class IRI="#preference_elicitation_process"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_engagement_process"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#target_value"/>
@@ -3459,12 +3464,12 @@ Cons sometimes specifies a quality which is not a realizable.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#computed_coefficient</IRI>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model#computed_coefficient</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">computed coefficient</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
-        <IRI>http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model#estimate</IRI>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#estimate</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">an estimate is a computed data item that attempts to approximate some quantity of interest based on a formal or informal model</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
