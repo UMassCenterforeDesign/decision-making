@@ -6,8 +6,10 @@
     <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/tomhagdorn/ontologies/2017/3/model" uri="file:/C:/Users/Tom/Desktop/Github%20upload/core/model.owl"/>
     <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/tom/ontologies/2017/8/ergo_design" uri="file:/C:/Users/Tom/Desktop/Github%20upload/core/ergo-design.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1515616037212" name="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20core.owl" uri="decision%20core.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1515616037212" name="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20method.owl" uri="decision%20method.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1515616037212" name="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20process.owl" uri="decision%20process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1516121683530" name="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision" uri="decision.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1516121683530" name="duplicate:https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20core.owl" uri="decision%20core.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1516121683530" name="duplicate:https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20core.owl" uri="decision_core.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1516121683530" name="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20method.owl" uri="decision%20method.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1516121683530" name="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision%20process.owl" uri="decision%20process.owl"/>
     </group>
 </catalog>
