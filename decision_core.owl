@@ -34,13 +34,16 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfFunction"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfFunction"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CentimeterMeasurementUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfFunction"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPortionOfMaterialConsumption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#speed_capability"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#HourMeasurementUnit"/>
@@ -148,10 +151,10 @@
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationContentEntity"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SecondMeasurementUnit"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_coefficient"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_coefficient"/>
+        <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SecondMeasurementUnit"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#ShortTonMeasurementUnit"/>
@@ -215,9 +218,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactProcessing"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#swing_weight_determination_proces"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareKilometerMeasurementUnit"/>
@@ -364,10 +364,10 @@
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicCentimeterMeasurementUnit"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLevel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLevel"/>
+        <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#introduces_criterion"/>
@@ -443,9 +443,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#differentiation_classification"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
     </Declaration>
     <Declaration>
         <Class IRI="#differentiation"/>
@@ -634,6 +631,9 @@
         <NamedIndividual IRI="#classification_marginally_acceptable"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#sponsor_role"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfEntertainment"/>
     </Declaration>
     <Declaration>
@@ -665,6 +665,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MilligramMeasurementUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#ObsoleteClass"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfVehicleUse"/>
@@ -742,9 +745,6 @@
         <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/functional%20model%202.0.owl#Decrease_function"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OBI_0200170"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#has_inactive_alternative"/>
     </Declaration>
     <Declaration>
@@ -758,7 +758,7 @@
     </Declaration>
     <SubClassOf>
         <Class IRI="http://purl.obolibrary.org/obo/IAO_0000006"/>
-        <Class IRI="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#ObsoleteClass"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://purl.obolibrary.org/obo/OBI_0001929"/>
@@ -772,12 +772,8 @@
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://purl.obolibrary.org/obo/OBI_0200170"/>
-        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="http://purl.obolibrary.org/obo/UO_0000002"/>
-        <Class IRI="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#ObsoleteClass"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
@@ -1394,12 +1390,16 @@
         <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#stretch_goal"/>
-        <Class IRI="#preference_level_label"/>
+        <Class IRI="#speed_capability"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#swing_weight_determination_proces"/>
-        <Class IRI="#preference_elicitation_process"/>
+        <Class IRI="#sponsor_role"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stretch_goal"/>
+        <Class IRI="#preference_level_label"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#target_value"/>
@@ -2060,11 +2060,6 @@ Cons sometimes specifies a quality which is not a realizable.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://purl.obolibrary.org/obo/OBI_0001929</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">mass value specification</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/OBI_0200170</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">averaging data transformation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
@@ -3602,6 +3597,11 @@ Cons sometimes specifies a quality which is not a realizable.</Literal>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Year Measurement Unit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a capability is a beneficial disposition inhering in some entity that when realized allows said entity to successfuly particiapte in a process up to some specified level</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#price</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a price is the disposition of some continuant to be exchanged between agents in return for another continuant or set of continuants when realzied in a  commercial process.</Literal>
@@ -3802,14 +3802,24 @@ Cons sometimes specifies a quality which is not a realizable.</Literal>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">setting specification</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#stretch_goal</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stretch goal</Literal>
+        <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+        <IRI>#speed_capability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a speed capability is a capability that allows some entity to a certain level of speed during a process</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#swing_weight_determination_proces</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">swing weight determination process</Literal>
+        <IRI>#speed_capability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">speed capability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sponsor_role</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sponsor role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#stretch_goal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stretch goal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
