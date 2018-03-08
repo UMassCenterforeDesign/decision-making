@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl">
+    <Prefix name="" IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl</Import>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#value_function_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#random_decision_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#analytic_hierarchy_process_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#group_decision_making_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#expected_stakeholder_value_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#predictive_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#multi-attribute_utility_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#hypothetical_equivalents_and_inequivalents_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#vote_decision_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#majority_vote_decision_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#model-based_decision_making_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#prospect_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#multi-criteria_decision_analysis_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#expected_utility_model"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model#is_model_of"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#preference_elicitation_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#consensus_decision_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#multi-attribute_value_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owlpreference_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#plurality_vote_decision_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#range_voting_decision_method"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000104"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owlpreference_model"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#predictive_model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owlpreference_model"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model#is_model_of"/>
+            <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#analytic_hierarchy_process_method"/>
+        <Class IRI="#multi-criteria_decision_analysis_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#consensus_decision_method"/>
+        <Class IRI="#group_decision_making_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#expected_stakeholder_value_model"/>
+        <Class IRI="#value_function_model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#expected_utility_model"/>
+        <Class IRI="#expected_stakeholder_value_model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#group_decision_making_method"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#hypothetical_equivalents_and_inequivalents_method"/>
+        <Class IRI="#preference_elicitation_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#majority_vote_decision_method"/>
+        <Class IRI="#plurality_vote_decision_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#model-based_decision_making_method"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#multi-attribute_utility_method"/>
+        <Class IRI="#multi-criteria_decision_analysis_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#multi-attribute_value_method"/>
+        <Class IRI="#multi-criteria_decision_analysis_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#multi-criteria_decision_analysis_method"/>
+        <Class IRI="#model-based_decision_making_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#plurality_vote_decision_method"/>
+        <Class IRI="#vote_decision_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#preference_elicitation_method"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#prospect_model"/>
+        <Class IRI="#value_function_model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#random_decision_method"/>
+        <Class IRI="#vote_decision_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#range_voting_decision_method"/>
+        <Class IRI="#vote_decision_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#value_function_model"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owlpreference_model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#vote_decision_method"/>
+        <Class IRI="#group_decision_making_method"/>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a decision method is a plan specification that outlines a workflow by which a decision will be made, as well as the requisite information content entities required to acheive said workflow.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">decision method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owlpreference_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a preference model is a hybrid that uses a mathematical formulation to represent and potentially predict the preferences of some agent or object aggregate of agents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owlpreference_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">preference model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+        <IRI>#expected_stakeholder_value_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">an expected value model is a stakeholder value model that accounts for the probability of outcomes when predicting preferences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#expected_stakeholder_value_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">expected value model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+        <IRI>#expected_utility_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">an expected utility model is an expected stakeholder value model that includes a model of the stakeholder&apos;s appetite for risk when predicting preferences.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#expected_utility_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class is numerically indistinguisable from its parent in the case where the stakeholder is risk neutral</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#expected_utility_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">expected utility model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#majority_vote_decision_method</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a majority vote decision method is a vote-based decision method that selects a decision alternative having at greater than 50% support among decision makers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#model-based_decision_making_method</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a model based decision making method is a decision making method that when concretized and realized as a decision process selects a top scoring option from a decision model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#plurality_vote_decision_method</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a plurality vote decision method is a deciion method that selects a decision alternative having the largest number of votes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#prospect_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a prospect theory model is a value function model that measures value in terms of gains and losses when predicting value, rather than aboslute amounts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#prospect_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">prospect theory model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#value_function_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a stakeholder value modle is a preference model that represents the benefit some agent receives from some entity and predicts their preference between entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#value_function_model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">value function model</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

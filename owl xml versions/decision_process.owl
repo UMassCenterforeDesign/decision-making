@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl">
+    <Prefix name="" IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl</Import>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_plan_specification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_eliminated_by"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#specification_process"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#constraint_specification"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#is_preference_for"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#requirement_specification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_process"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_plan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_evaluation_process"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_enabled_by"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_modified_by"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_capability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#evaluation_protocol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_specification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#estimate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#replaces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_process"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#risk_appetite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#mission_specification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#eliminates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_replaced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_about"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#constraint_specification"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000005"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_evaluation_process"/>
+        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_specification"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_specification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_about"/>
+            <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision"/>
+        <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000058"/>
+            <ObjectUnionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/BFO_0000017"/>
+                <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_plan_specification"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000104"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_plan_specification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+            <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_plan_specification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+            <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_specification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_process"/>
+        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_process"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/OBI_0000299"/>
+            <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#evaluation_protocol"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000104"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#mission_specification"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000104"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process"/>
+        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process"/>
+        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#requirement_specification"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000005"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#requirement_specification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000058"/>
+            <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#risk_appetite"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#specification_process"/>
+        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000011"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#specification_process"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/OBI_0000299"/>
+            <Class IRI="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_capability"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_plan"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_process"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_value"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_eliminated_by"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_modified_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_replaced_by"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_modified_by"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#eliminates"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_eliminated_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_enabled_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_modified_by"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_replaced_by"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#replaces"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#eliminates"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#replaces"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#is_preference_for"/>
+        <Class IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#eliminates"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#replaces"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#eliminates</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">denotes a relation wherein some entity affects a continuant such that it no longer needs to participate in a process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#eliminates</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">eliminates process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">describes a relation in which an independent continuant enables a second independent continuant that possesses it to realize some disposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_capability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">enables capability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_plan</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">enables plan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">denotes a relation wherein the presence or participation of some entity affects the world such that a process may occur</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#enables_value</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">enables value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_eliminated_by</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is eliminated by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_modified_by</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is modified by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#is_replaced_by</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is replaced by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">denotes a relation wherein some entity has the potential to affect some other entity t</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">modifies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#replaces</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">denotes a relation wherein one process replaces another</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#replaces</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">replaces process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a decision method is a plan specification that outlines a workflow by which a decision will be made, as well as the requisite information content entities required to acheive said workflow.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">decision method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#constraint_specification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a constraint specification is an objective specification that specifies a set of limitations on the possible states of some entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#constraint_specification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">constraint specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_evaluation_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">evalaution process is a planned process that realizes a measuremetn or estimation plan for determining the level or state of some variable fo interest to a the agent that performs the rpocess or some agent or agents for whom they work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_evaluation_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">entity evaluation process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_specification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">criterion specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a decision attribute is a narrative object that describes a criterion used to compare candidates in a decision.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_plan_specification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a decision plan specification is a plan specification that indicates how a decision will be executed, the alternatives that will be considered,  the criteria by which they will judged, and the preferences for those criteria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_plan_specification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">decision plan specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a decision process is a process in which some agent or aggregate of agents having the role of a decision maker indicate a preference towards an option or bundle of options belonging to a set of possible alternatives</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">decision process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#evaluation_protocol</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">an evaluation protocol is a plan specification that details how some variable or entity of interest is to be characterized through a set of measurements, observations, or estimates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#is_preference_for</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">denotes a relation between a preference and another entity, indicating that the preference is indcated toward said entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#is_preference_for</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is preference toward</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#mission_specification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">mission specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a need is a disposition that details the specific set of continuants or continuant properties that an entity requires to realize a set of dispositions that they feel is important</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a need identification process is a planned process wherein an agent or aggregate of agents having a stakeholder role in some context are engaged so as to identify their needs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">need identification process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a preference is a dispositoin of some agent to favor one alternative over another based on the agents&apos; understanding of the two alternatives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a preference elicitation process is a planned process wherein some agent or aggregate of agents determines the preferences of another agent or aggregate of agents along some set of criteria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">preference elicitation process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#requirement_specification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A requirement specification is an objective specification that indicates a set of needs that must be met by some entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#requirement_specification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">requirement specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#risk_appetite</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a risk appetite is a disposition of an agent or object aggregate of agents to tolerate uncertainty.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#risk_appetite</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">risk appetite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#specification_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a specification process is a planned process that realizes some plan wherein an agent or aggregate thereof develop and assign directive information entities that are about some entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#specification_process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">specification process</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
