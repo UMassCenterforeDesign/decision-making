@@ -140,10 +140,10 @@
 
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#is_computed_from -->
 
-    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#is_computed_from">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#is_computed_from">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tomhagdorn/ontologies/2017/8/decision#has_basis"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    </rdf:Description>
+    </owl:ObjectProperty>
     
 
 
@@ -152,6 +152,12 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#has_classification">
         <rdfs:label>has classification</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#performs -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#performs"/>
     
 
 
@@ -213,7 +219,6 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_input"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision"/>
         <rdfs:range>
             <owl:Restriction>
@@ -248,6 +253,16 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#introduces_criterion">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#introduces"/>
         <rdfs:label>introduces item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#is_measured_as -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#is_measured_as">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_subject_of"/>
+        <ExtendedRelationOntology:definition>describes a trait wherein a trait of some entity is characterized by way of measurements of some other entity.</ExtendedRelationOntology:definition>
+        <rdfs:label>is measured as</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1908,6 +1923,12 @@ Cons sometimes specifies a quality which is not a realizable.</obo:IAO_0000116>
         <obo:IAO_0000115>a weight data set is a data set consisting of a set of preference weighting factors used to construct a model of some agent&apos;s preferences, or a bias a model to reflect those preferences</obo:IAO_0000115>
         <rdfs:label>weight data set</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method"/>
     
 
 
