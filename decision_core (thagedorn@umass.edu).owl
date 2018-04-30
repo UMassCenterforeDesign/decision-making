@@ -150,7 +150,6 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#has_classification -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#has_classification">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#designated_by"/>
         <rdfs:label>has classification</rdfs:label>
     </owl:ObjectProperty>
     
@@ -158,41 +157,15 @@
 
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#performs -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#performs">
-        <rdfs:subPropertyOf rdf:resource="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts">
-        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decides_about"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#performs"/>
     
 
 
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#approves -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#approves">
-        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts"/>
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decides_about"/>
         <ExtendedRelationOntology:definition>a relation in which a decision process yields a judgment wherein a some entity is accepted for a role  in future planned processes</ExtendedRelationOntology:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authorizes -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authorizes">
-        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#concurs_with -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#concurs_with">
-        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts"/>
     </owl:ObjectProperty>
     
 
@@ -246,8 +219,13 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_input"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_role"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_alternative_role"/>
+            </owl:Restriction>
+        </rdfs:range>
         <rdfs:label>has alternative</rdfs:label>
     </owl:ObjectProperty>
     
@@ -279,11 +257,21 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#is_measured_as -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#is_measured_as">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_subject_of"/>
+        <ExtendedRelationOntology:definition>describes a trait wherein a trait of some entity is characterized by way of measurements of some other entity.</ExtendedRelationOntology:definition>
+        <rdfs:label>is measured as</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#makes_decision -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#makes_decision">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#performs"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision"/>
         <ExtendedRelationOntology:definition>indicates a relation wherein some entity having a decision maker role participats in a decision process that decides about soemthing</ExtendedRelationOntology:definition>
     </owl:ObjectProperty>
     
@@ -293,6 +281,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#refers_to">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_about"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000006"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:label>refers to</rdfs:label>
     </owl:ObjectProperty>
@@ -320,7 +309,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#selects">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decides_about"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision"/>
         <ExtendedRelationOntology:definition>a relation in whcih a decision process chooses one entity for use in future planned processes from some set of alternatives</ExtendedRelationOntology:definition>
     </owl:ObjectProperty>
     
@@ -370,10 +359,55 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000100 -->
+    <!-- http://purl.obolibrary.org/obo/IAO_0000006 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000100">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000006">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#ObsoleteClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000140">
+        <obo:IAO_0000111 xml:lang="en">setting datum</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A settings datum is a datum that denotes some configuration of an instrument.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">2/3/2009 Feedback from OBI
+
+This should be a &quot;setting specification&quot;. There is a question of whether it is information about a realizable or not.
+
+Pro other specification are about realizables.
+Cons sometimes specifies a quality which is not a realizable.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Alan grouped these in placeholder for the moment. Name by analogy to measurement datum.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">setting datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001929 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001929">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111>mass value specification</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115>A value specification that specifies the mass of some thing.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Bjoern Peters</obo:IAO_0000117>
+        <rdfs:label>mass value specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000002">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#ObsoleteClass"/>
     </owl:Class>
     
 
@@ -823,6 +857,12 @@
 
     <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfDependentContinuant">
         <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#realizes"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/functional%20model%202.0.owl#Decrease_function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Change in which some Independent Continuant has a decrease in the level of some Dependent Continuant that it bears.</ExtendedRelationOntology:definition>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decrease of Dependent Continuant</rdfs:label>
     </owl:Class>
@@ -1145,6 +1185,12 @@
 
     <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDependentContinuant">
         <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#realizes"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/functional%20model%202.0.owl#Increase_function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Change in which some Independent Continuant has an increase in the level of some Dependent Continuant that it bears.</ExtendedRelationOntology:definition>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increase of Dependent Continuant</rdfs:label>
     </owl:Class>
@@ -1495,10 +1541,9 @@
 
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability">
         <ExtendedRelationOntology:definition>a capability is a beneficial disposition inhering in some entity that when realized allows said entity to successfuly particiapte in a process up to some specified level</ExtendedRelationOntology:definition>
-    </owl:Class>
+    </rdf:Description>
     
 
 
@@ -1517,6 +1562,18 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <rdfs:label>stakeholder role</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/functional%20model%202.0.owl#Decrease_function -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/functional%20model%202.0.owl#Decrease_function"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/functional%20model%202.0.owl#Increase_function -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/functional%20model%202.0.owl#Increase_function"/>
     
 
 
@@ -1551,37 +1608,14 @@
 
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification">
-        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DesignativeInformationContentEntity"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#arbitrary_decision_method -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
-        <ExtendedRelationOntology:definition>an acceptance decision is a decision specificaiton that specifies that some proposition in a binary decision is to be carried out</ExtendedRelationOntology:definition>
-        <rdfs:label>acceptance decision specificaiton</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization">
-        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
-        <ExtendedRelationOntology:definition>an act of characterization is an intentional act that involves some entity collecting or asserting information about another entity to better understand the traits that inhere in it.</ExtendedRelationOntology:definition>
-        <rdfs:label>Act of Characterization</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#approval_decision -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#approval_decision">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision"/>
-        <rdfs:label>approval decision specification</rdfs:label>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#arbitrary_decision_method">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
     </owl:Class>
     
 
@@ -1606,45 +1640,54 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authority_role -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authority_role">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <ExtendedRelationOntology:definition>a role inhering in some person or group of people wherein teh realization of the role results in an exercise of externally recognized power over other entities</ExtendedRelationOntology:definition>
-        <rdfs:label>role of authority</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authorization_decision -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authorization_decision">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision"/>
-        <ExtendedRelationOntology:definition>an authorization decision is an acceptance decision specification that additionally reflects an exercise of authority in the form of an act of granting permission.</ExtendedRelationOntology:definition>
-        <rdfs:label>authorization decision specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#concurrence_decision -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#concurrence_decision">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision"/>
-        <rdfs:label>concurrence decision specification</rdfs:label>
+        <rdfs:label>authority role</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision -->
 
-    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision">
-        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
-    </rdf:Description>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
+    </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_alternative_classificaiton -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_alternative_role -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_alternative_classificaiton">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
-        <rdfs:comment>a decision alternative classification is a classification that indicates some entity is to be considered as a possible choice in a decision described in a decision process plan</rdfs:comment>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_alternative_role">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:label>decision alternative role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000058"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_specification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>decision criterion role</rdfs:label>
     </owl:Class>
     
 
@@ -1652,8 +1695,8 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_maker_role -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_maker_role">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <ExtendedRelationOntology:definition>a decision role is a role wherein wherein the bearer realizes the role by performing a decision process resulting in a decisoin</ExtendedRelationOntology:definition>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authority_role"/>
+        <ExtendedRelationOntology:definition>a role of some entity wherein the bearer realizes the role by performing a decision process resulting in a decisoin</ExtendedRelationOntology:definition>
         <rdfs:label>decision maker role</rdfs:label>
     </owl:Class>
     
@@ -1667,19 +1710,12 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_rank -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification">
-        <ExtendedRelationOntology:definition>a decision specification is a directive information content entity that indicates the results of a decision (occurrent) wherein one option is selected from some set of possible alternatives</ExtendedRelationOntology:definition>
-        <rdfs:label>decision specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#deliverable_classification -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#deliverable_classification">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_rank">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_data_item"/>
+        <obo:IAO_0000115>a decision rank is a computed data item that indicates the level of preference towards some option relative to other options</obo:IAO_0000115>
+        <rdfs:label>numerical rank</rdfs:label>
     </owl:Class>
     
 
@@ -1687,8 +1723,7 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
-        <ExtendedRelationOntology:definition>differentiation is a relational quality that reflects the degree to which one entity can be distinguished from another based on its the aggregate of traits it bears.</ExtendedRelationOntology:definition>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
     </owl:Class>
     
 
@@ -1697,6 +1732,14 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation_classification">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#importance -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#importance">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
     </owl:Class>
     
 
@@ -1736,18 +1779,16 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process -->
-
-    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization"/>
-    </rdf:Description>
-    
-
-
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_specification -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_specification">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000007"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>a measurement specification is an action specification that indicates the intent to measure soem aspect of an entity using some specific type of measurement</obo:IAO_0000115>
         <rdfs:label>measurement type specification</rdfs:label>
     </owl:Class>
@@ -1763,22 +1804,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process -->
-
-    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process"/>
-    </rdf:Description>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#observation_process -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#observation_process">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization"/>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference"/>
@@ -1788,7 +1813,7 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_engagement_process"/>
     </owl:Class>
     
 
@@ -1796,8 +1821,8 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_level_label -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_level_label">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
-        <rdfs:label>preference level classification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <rdfs:label>preference level label</rdfs:label>
     </owl:Class>
     
 
@@ -1806,38 +1831,32 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rank_specification">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_rank"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>a rank specification is a categorical value specification that specifies the performance of some entity relative to other entities within a set as judged by some assessment plan</obo:IAO_0000115>
         <rdfs:label>rank specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rejection_decision -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#setting_specification -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rejection_decision">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
-        <ExtendedRelationOntology:definition>a rejection decision specification is a decision specification that specifies some proposition considered during a decision process is not to be pursued</ExtendedRelationOntology:definition>
-        <rdfs:label>rejection decision specification</rdfs:label>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#setting_specification">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
+        <obo:IAO_0000115>a setting specification is a directive information entity that specifies the configuration of some instrument</obo:IAO_0000115>
+        <rdfs:label>setting specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#selection_decision -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_criteria_decision_analysis_method -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#selection_decision">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
-        <ExtendedRelationOntology:definition>a selection decision specification is a decision specification that specifies that a decision process has identifed one alternative to be pursued from a set of possible alternatives.</ExtendedRelationOntology:definition>
-        <rdfs:label>selection decision specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#speed_capability -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#speed_capability">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
-        <ExtendedRelationOntology:definition>a speed capability is a capability that allows some entity to a certain level of speed during a process</ExtendedRelationOntology:definition>
-        <rdfs:label>speed capability</rdfs:label>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_criteria_decision_analysis_method">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method"/>
     </owl:Class>
     
 
@@ -1845,8 +1864,7 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#sponsor_role -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#sponsor_role">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role"/>
-        <ExtendedRelationOntology:definition>a sponsor role is a stakeholder role wherein the agent bearer is providing support (financial, reputational, etc.) to a process</ExtendedRelationOntology:definition>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <rdfs:label>sponsor role</rdfs:label>
     </owl:Class>
     
@@ -1873,8 +1891,18 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#tradeoff -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#tradeoff">
-        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DescriptiveInformationContentEntity"/>
-        <obo:IAO_0000115>a tradeoff is a despcriptive information content entity that describes a conflict between two attributes of a problem wherein changes that would be assesssed as improving one attribute result in some degree of perceived harm to another.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#RepresentationalInformationContentEntity"/>
+        <obo:IAO_0000115>a tradeoff is a narrative object that communicates a conflict between two attributes of a problem wherein changes that would be assesssed as improving one attribute result in some degree of perceived harm to another.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#velocity_capability -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#velocity_capability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <ExtendedRelationOntology:definition>a speed capability is a capability that allows some entity to a certain level of speed during a process</ExtendedRelationOntology:definition>
+        <rdfs:label>speed capability</rdfs:label>
     </owl:Class>
     
 
@@ -1898,11 +1926,9 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#specification_process -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method -->
 
-    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#specification_process">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization"/>
-    </rdf:Description>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method"/>
     
 
 
@@ -2722,9 +2748,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#estimate">
         <ExtendedRelationOntology:definition>an estimate is a computed data item that attempts to approximate some quantity of interest based on a formal or informal model</ExtendedRelationOntology:definition>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#modeling_process">
-        <ExtendedRelationOntology:definition>a modeling process is a specification process wherein an agent generates a model that represents known information or predicts unknown information to characterize an entity</ExtendedRelationOntology:definition>
     </rdf:Description>
     
 

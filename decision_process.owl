@@ -11,7 +11,8 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl"/>
+        <owl:imports rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl"/>
     </owl:Ontology>
     
 
@@ -41,6 +42,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000299"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000058 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000058"/>
     
 
 
@@ -183,15 +196,118 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000104"/>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Process in which at least one Agent plays a causative role.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intentional Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#SocialAct -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#SocialAct">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wiktionary.org/wiki/commually</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Social Act</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity -->
 
     <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#delphi_technique_engagement_procses -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#delphi_technique_engagement_procses">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_engagement_process"/>
+        <obo:IAO_0000115>a delphi technique engagement process is a stakeholder engagement process that realizes the concretization of of a plan specification for a the Delphi process of stakeholder engagement</obo:IAO_0000115>
+        <rdfs:label>Delphi technique engagement process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#focus_group_process -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#focus_group_process">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_engagement_process"/>
+        <obo:IAO_0000115>a focus group process is stakeholder engagement process wherein a group of agents who are stakeholders in some entity are used as proxies for a larger collection thereof are solicited to engage in a guided discussion of said entity</obo:IAO_0000115>
+        <rdfs:label>focus group process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#interview_process -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#interview_process">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_engagement_process"/>
+        <obo:IAO_0000115>an interview process is a stakeholder engagement process in which an agent or group fo agents that are stakeholders in some entity are solicited to answer a series of questions about said entity</obo:IAO_0000115>
+        <rdfs:label>interview process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_engagement_process -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_engagement_process">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#SocialAct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#agent"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_role"/>
+                                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>stakeholder engagement process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#survey_process -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#survey_process">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_engagement_process"/>
+        <rdfs:label>survey process</rdfs:label>
+    </owl:Class>
     
 
 
@@ -203,30 +319,16 @@
 
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
-        <obo:IAO_0000115>a decision method is a plan specification that outlines a workflow by which a decision will be made, as well as the requisite information content entities required to acheive said workflow.</obo:IAO_0000115>
-        <rdfs:label>decision method</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
     
 
 
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#constraint_specification -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#constraint_specification">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
         <obo:IAO_0000115>a constraint specification is an objective specification that specifies a set of limitations on the possible states of some entity</obo:IAO_0000115>
         <rdfs:label>constraint specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_evaluation_process -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_evaluation_process">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <ExtendedRelationOntology:definition>evalaution process is a planned process that realizes a measuremetn or estimation plan for determining the level or state of some variable fo interest to a the agent that performs the rpocess or some agent or agents for whom they work</ExtendedRelationOntology:definition>
-        <rdfs:label>entity evaluation process</rdfs:label>
     </owl:Class>
     
 
@@ -235,12 +337,6 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#criterion_specification">
         <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_about"/>
-                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label>criterion specification</rdfs:label>
     </owl:Class>
     
@@ -249,29 +345,14 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision">
-        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_attirbute">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000058"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>a decision attribute is a narrative object that describes a criterion used to compare candidates in a decision.</obo:IAO_0000115>
+        <obo:IAO_0000115>a decision process is a process in which some agent or aggregate of agents having the role of a decision maker indicate a preference towards an option or bundle of options belonging to a set of possible alternatives</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -298,18 +379,10 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_process -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_process">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>a decision process is a process in which some agent or aggregate of agents having the role of a decision maker indicate a preference towards an option or bundle of options belonging to a set of possible alternatives</obo:IAO_0000115>
-        <rdfs:label>decision process</rdfs:label>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
     </owl:Class>
     
 
@@ -319,6 +392,16 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#evaluation_protocol">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
         <obo:IAO_0000115>an evaluation protocol is a plan specification that details how some variable or entity of interest is to be characterized through a set of measurements, observations, or estimates</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfAppraisal"/>
+        <ExtendedRelationOntology:definition>evalaution process is an act of characterization that realizes a measuremetn or estimation plan for determining the level or state of some variable fo interest to a the agent that performs the rpocess or some agent or agents for whom they work</ExtendedRelationOntology:definition>
+        <rdfs:label>measurement process</rdfs:label>
     </owl:Class>
     
 
@@ -344,7 +427,7 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfAppraisal"/>
         <obo:IAO_0000115>a need identification process is a planned process wherein an agent or aggregate of agents having a stakeholder role in some context are engaged so as to identify their needs</obo:IAO_0000115>
         <rdfs:label>need identification process</rdfs:label>
     </owl:Class>
@@ -363,25 +446,9 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfAppraisal"/>
         <obo:IAO_0000115>a preference elicitation process is a planned process wherein some agent or aggregate of agents determines the preferences of another agent or aggregate of agents along some set of criteria</obo:IAO_0000115>
         <rdfs:label>preference elicitation process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#requirement_specification -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#requirement_specification">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000058"/>
-                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>A requirement specification is an objective specification that indicates a set of needs that must be met by some entity.</obo:IAO_0000115>
-        <rdfs:label>requirement specification</rdfs:label>
     </owl:Class>
     
 
@@ -399,7 +466,7 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#specification_process -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#specification_process">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
@@ -409,6 +476,20 @@
         <obo:IAO_0000115>a specification process is a planned process that realizes some plan wherein an agent or aggregate thereof develop and assign directive information entities that are about some entity</obo:IAO_0000115>
         <rdfs:label>specification process</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method_specification">
+        <rdfs:label>method specification</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 

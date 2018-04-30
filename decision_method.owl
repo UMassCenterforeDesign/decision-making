@@ -44,14 +44,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#predictive_model -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#predictive_model"/>
@@ -61,9 +53,9 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method_specification"/>
         <obo:IAO_0000115>a decision method is a plan specification that outlines a workflow by which a decision will be made, as well as the requisite information content entities required to acheive said workflow.</obo:IAO_0000115>
-        <rdfs:label>decision method</rdfs:label>
+        <rdfs:label>decision method specification</rdfs:label>
     </owl:Class>
     
 
@@ -84,10 +76,52 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#arbitrary_decision_method -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#arbitrary_decision_method">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rank_specification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rank_specification">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+        <obo:IAO_0000115>a rank specification is a categorical value specification that specifies the performance of some entity relative to other entities within a set as judged by some assessment plan</obo:IAO_0000115>
+        <rdfs:label>rank specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_attribute_utility_method -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_attribute_utility_method">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_criteria_decision_analysis_method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_attribute_value_method -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_attribute_value_method">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_criteria_decision_analysis_method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_criteria_decision_analysis_method -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_criteria_decision_analysis_method">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method"/>
     </owl:Class>
     
 
@@ -187,6 +221,15 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#objective_hierarchy_specification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#objective_hierarchy_specification">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <ExtendedRelationOntology:definition>an objective hierarchy  is an dataset consisting of a rank ordering of objective specifications in order of their importance to some agent having the role fo a stakeholder in a decision process.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#plurality_vote_decision_method -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#plurality_vote_decision_method">
@@ -199,7 +242,7 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#preference_elicitation_method -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#preference_elicitation_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method_specification"/>
     </owl:Class>
     
 
