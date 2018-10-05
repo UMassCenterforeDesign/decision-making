@@ -11,6 +11,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl"/>
     </owl:Ontology>
     
@@ -44,19 +45,17 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#predictive_model -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#ModelingPlan -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#predictive_model"/>
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#ModelingPlan">
+        <rdfs:comment>while not every permutation of modeling plan has an explicit class in this case, parthood relations can be used to construct the requisite plan specification from individual subparts</rdfs:comment>
+    </rdf:Description>
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#predictive_model -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method_specification"/>
-        <obo:IAO_0000115>a decision method is a plan specification that outlines a workflow by which a decision will be made, as well as the requisite information content entities required to acheive said workflow.</obo:IAO_0000115>
-        <rdfs:label>decision method specification</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#predictive_model"/>
     
 
 
@@ -76,10 +75,73 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#arbitrary_decision_method -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#DecisionPlan -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#arbitrary_decision_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#DecisionPlan"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#MultiAttributeUtilityModelPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#MultiAttributeUtilityModelPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#MulticriteriaPreferenceModelingPlan"/>
+        <ExtendedRelationOntology:definition>A multiattribute utility modeling plan is a preference modeling plan that prescribes an act of modeling having an output is a model that models a level of preference over some defined bound and is responseive to uncertainty</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#MultiAttributeValueModelPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#MultiAttributeValueModelPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#MulticriteriaPreferenceModelingPlan"/>
+        <ExtendedRelationOntology:definition>A multiattribute utility modeling plan is a preference modeling plan that prescribes an act of modeling having an output is a model that models a level of preference over some defined bound and is not responseive to uncertainty</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#MulticriteriaPreferenceModelingPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#MulticriteriaPreferenceModelingPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#PreferenceModelingPlan"/>
+        <ExtendedRelationOntology:definition>A multicriteria preference modeling plan is a preference modeling plan that prescribes an act of modeling having an output that is am model of some stakeholder(s)&apos; preference towards a set of more than one objective weighed against each other.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#PreferenceModelingPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#PreferenceModelingPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#ModelingPlan"/>
+        <ExtendedRelationOntology:definition>A preference modeling plan is a mdoling plan that prescribes some act of modeling that yields an output which is a model of the preferences of some agent or group of agents.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#SingleCriteriaPreferenceModelingPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#SingleCriteriaPreferenceModelingPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#PreferenceModelingPlan"/>
+        <ExtendedRelationOntology:definition>A multicriteria preference modeling plan is a preference modeling plan that prescribes an act of modeling having an output that is am model of some stakeholder(s)&apos; preference towards a single objective</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#maximizing_objective -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#maximizing_objective">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Objective"/>
+        <ExtendedRelationOntology:definition>A maximizing objective is an objective wherein the maximum amount of the the prescribed subject is to be pursued</ExtendedRelationOntology:definition>
+        <rdfs:label>maximizing objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#minimizing_objective -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#minimizing_objective">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Objective"/>
+        <ExtendedRelationOntology:definition>A maximizing objective is an objective wherein the minimum amount of the the prescribed subject is to be pursued</ExtendedRelationOntology:definition>
+        <rdfs:label>minimizing objective</rdfs:label>
     </owl:Class>
     
 
@@ -95,7 +157,6 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rank_specification -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rank_specification">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
         <obo:IAO_0000115>a rank specification is a categorical value specification that specifies the performance of some entity relative to other entities within a set as judged by some assessment plan</obo:IAO_0000115>
         <rdfs:label>rank specification</rdfs:label>
     </owl:Class>
@@ -121,7 +182,66 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_criteria_decision_analysis_method -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#single_criteria_decision_analysis_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#ModelBasedDecisionPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#ArbitraryDecisionPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#ArbitraryDecisionPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#DecisionPlan"/>
+        <obo:IAO_0000115>An Arbitrary decision plan is a decisciion plan specificaiton that prescribes the use of some random indicator as a basis for making a decision</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#GroupDecisionPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#GroupDecisionPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#DecisionPlan"/>
+        <obo:IAO_0000115>a group decision plan is a deicion plan specificaiton that prescribes an Act of Decision Making whrein more than one person bearsd the role of a decision maker</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#ModelBasedDecisionPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#ModelBasedDecisionPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#DecisionPlan"/>
+        <obo:IAO_0000115>a model based decision making method is a decision making method that when concretized and realized as a decision process selects a top scoring option from a decision model</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#MultiStakeholderPreferenceModlingPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#MultiStakeholderPreferenceModlingPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#PreferenceModelingPlan"/>
+        <ExtendedRelationOntology:definition>a multisatekholder preference modeling plan is a preference modeling plan that prescripes a modeling process that yields a model that attempts to account for the preferences of severeal stakeholders</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#PreferenceElicitiationPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#PreferenceElicitiationPlan"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#SingeAttributeUtilityModelingPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#SingeAttributeUtilityModelingPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#SingleCriteriaPreferenceModelingPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#SingleStakeholderPreferenceModelingPlan -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#SingleStakeholderPreferenceModelingPlan">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#PreferenceModelingPlan"/>
+        <ExtendedRelationOntology:definition>a multisatekholder preference modeling plan is a preference modeling plan that prescripes a modeling process that yields a model that attempts to account for the preferences of a single stakeholder</ExtendedRelationOntology:definition>
     </owl:Class>
     
 
@@ -137,7 +257,8 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#consensus_decision_method -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#consensus_decision_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#group_decision_making_method"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#GroupDecisionPlan"/>
+        <obo:IAO_0000115>A Consenus deciion Plan is that prescribes a decision or part of an act of decision making wherein  group decision plan where members bearing the role of decision maker mututally agree upon the ultimate decision</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -163,18 +284,11 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#group_decision_making_method -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#group_decision_making_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#hypothetical_equivalents_and_inequivalents_method -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#hypothetical_equivalents_and_inequivalents_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#preference_elicitation_method"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#PreferenceElicitiationPlan"/>
+        <obo:IAO_0000115>a hypothetical equivalents and inequivalents prefence modeling plan is a preference elictation plan that prescribes the use of a series of decisions between descriptions of mock alternatives to determine relative preferences over multiple objectives simultaneously</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -184,15 +298,6 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#majority_vote_decision_method">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#plurality_vote_decision_method"/>
         <obo:IAO_0000115>a majority vote decision method is a vote-based decision method that selects a decision alternative having at greater than 50% support among decision makers</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owldecision_method"/>
-        <obo:IAO_0000115>a model based decision making method is a decision making method that when concretized and realized as a decision process selects a top scoring option from a decision model</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -216,7 +321,7 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#multi-criteria_decision_analysis_method -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#multi-criteria_decision_analysis_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#model-based_decision_making_method"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#ModelBasedDecisionPlan"/>
     </owl:Class>
     
 
@@ -235,14 +340,6 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#plurality_vote_decision_method">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#vote_decision_method"/>
         <obo:IAO_0000115>a plurality vote decision method is a deciion method that selects a decision alternative having the largest number of votes</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#preference_elicitation_method -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#preference_elicitation_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#method_specification"/>
     </owl:Class>
     
 
@@ -286,7 +383,8 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#vote_decision_method -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#vote_decision_method">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#group_decision_making_method"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#GroupDecisionPlan"/>
+        <obo:IAO_0000115>A Consenus deciion Plan is that prescribes a decision or part of an act of decision making wherein  group decision plan where members bearing the role of decision maker independently decide, and some tallying method is used to select the majority view</obo:IAO_0000115>
     </owl:Class>
 </rdf:RDF>
 
