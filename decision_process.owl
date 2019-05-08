@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl"
      xml:base="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl"
-     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"/>
     </owl:Ontology>
     
 
@@ -51,15 +51,15 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0000058 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000058"/>
-    
-
-
     <!-- http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_about -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_about"/>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_part -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_part"/>
     
 
 
@@ -233,11 +233,10 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#ActOfInteractiveCharacterization -->
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#StakeholderRole -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#ActOfInteractiveCharacterization">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#act_of_characterization"/>
-        <ExtendedRelationOntology:definition>an act of interactive characterization is an act of characterization that uses formal or informal social interaction with its focus as a means to characterization</ExtendedRelationOntology:definition>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#StakeholderRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
     </owl:Class>
     
 
@@ -245,17 +244,9 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#delphi_technique_engagement_procses -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#delphi_technique_engagement_procses">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#ActOfInteractiveCharacterization"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfInteractiveCharacterization"/>
         <obo:IAO_0000115>a delphi technique engagement process is a stakeholder engagement process that realizes the concretization of of a plan specification for a the Delphi process of stakeholder engagement</obo:IAO_0000115>
         <rdfs:label>Delphi technique engagement process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
     </owl:Class>
     
 
@@ -389,8 +380,17 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfFocusGroupModeration -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfFocusGroupModeration">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#ActOfInteractiveCharacterization"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfInteractiveCharacterization"/>
         <ExtendedRelationOntology:definition>an act of focus group consultation is an act of interactive characterization wherein a group of agents is interacted with to provide opinions or expertise regarding a group they are intended to represent</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfInteractiveCharacterization -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfInteractiveCharacterization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfAppraisal"/>
+        <ExtendedRelationOntology:definition>an act of interactive characterization is an act of characterization that uses formal or informal social interaction with its focus as a means to characterization</ExtendedRelationOntology:definition>
     </owl:Class>
     
 
@@ -398,7 +398,7 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfInterviewing -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfInterviewing">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#ActOfInteractiveCharacterization"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfInteractiveCharacterization"/>
         <ExtendedRelationOntology:definition>an act of interviewing is an act of interactive characterization wherein an agent is queried  to provide opinions or expertise regarding the focus of the characterization</ExtendedRelationOntology:definition>
     </owl:Class>
     
@@ -407,7 +407,7 @@
     <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfPhysicalSimulation -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#ActOfPhysicalSimulation">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#act_of_characterization"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfAppraisal"/>
         <ExtendedRelationOntology:definition>An act of physical simulation is an act of characterization wherein an agent employs a series of acts meant to reenact parts of some process of interest</ExtendedRelationOntology:definition>
     </owl:Class>
     
@@ -464,5 +464,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

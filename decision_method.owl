@@ -386,6 +386,26 @@
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl#GroupDecisionPlan"/>
         <obo:IAO_0000115>A Consenus deciion Plan is that prescribes a decision or part of an act of decision making wherein  group decision plan where members bearing the role of decision maker independently decide, and some tallying method is used to select the majority view</obo:IAO_0000115>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#AttributeLevelDesignation">
+        <ExtendedRelationOntology:definition>An Attribute level designation is a designatiove information content entity that indicates some measurement corresponds with an arbitrary level of a trait from some group of levels</ExtendedRelationOntology:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#ImportanceDesignation">
+        <rdfs:comment>An importance designation is an attribute level designation that indicates the importance of some entity from perspective of some agent having a stakeholder role in processes involving said entity</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#PreferenceLevelDesignation">
+        <ExtendedRelationOntology:definition>A PREFERENCE level designation is a attribute level designation that indicates a preference level of interest towards an entity as borne by some stakeholder</ExtendedRelationOntology:definition>
+    </rdf:Description>
 </rdf:RDF>
 
 
